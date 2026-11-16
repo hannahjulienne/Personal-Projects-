@@ -1591,7 +1591,7 @@ def prompt_increment():
 
 if __name__ == "__main__":
     while True:
-        mode = input(
+        option = input(
             "\nSelect an option:\n"
             "B - Batch creation\n"
             "S - Single file creation\n"
@@ -1686,7 +1686,7 @@ if __name__ == "__main__":
                     altitude_label = f"{ceiling // 1000}k"
                     filename = (
                         f"{lat_label}{long_label}"
-                        f"{altitude_label}{total_duration}m.csv")
+                        f"{altitude_label}{cruise_duration}m.csv")
                     filepath = os.path.join(output_folder, filename)
                     start_time = datetime.now().replace(
                         second=0, microsecond=0)
