@@ -1630,8 +1630,8 @@ if __name__ == "__main__":
                     if -180 <= long_start <= 180 and -180 <= long_end <= 180:
                         break
                     print("Invalid longitude. Must be between -180 and 180.")
-                increment = input("Coordinate increment (1, 0.5, or 0.25 degrees): ")
-                if increment not in ["1", "0.5", "0.25"]:
+                increment = int(input("Coordinate increment: "))
+                if increment < 0:
                     print("Invalid increment.")
                     continue
                 increment = Decimal(increment)
